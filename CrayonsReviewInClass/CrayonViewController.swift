@@ -45,6 +45,12 @@ extension CrayonViewController: UITableViewDataSource{
     
     let currentCrayon = crayons[indexPath.row]
     
+    if currentCrayon.name == "Black" {
+     cell.textLabel?.textColor = .white
+      cell.detailTextLabel?.textColor = .white
+    }
+    
+    
     cell.textLabel?.text = currentCrayon.name
     cell.detailTextLabel?.text = currentCrayon.hex
     cell.backgroundColor = currentCrayon.color()
